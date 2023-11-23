@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment2</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+    <script>
+      function ShowData() {
+        var value = document.getElementById("r2c1").innerText;
+        document.getElementById("r2c2").innerHTML = parseInt(value);
+        document.getElementById("r2c3").innerHTML = parseFloat(value);
+        document.getElementById("r2c4").innerHTML = Number(value);
+        document.getElementById("r2c5").innerHTML = +value;
+        document.getElementById("r2c6").innerHTML = value | 0;
+
+        var value = document.getElementById("r3c1").innerText;
+        document.getElementById("r3c2").innerHTML = parseInt(value);
+        document.getElementById("r3c3").innerHTML = parseFloat(value);
+        document.getElementById("r3c4").innerHTML = Number(value);
+        document.getElementById("r3c5").innerHTML = +value;
+        document.getElementById("r3c6").innerHTML = value | 0;
+
+        var value = document.getElementById("r4c1").innerText;
+        document.getElementById("r4c2").innerHTML = parseInt(value);
+        document.getElementById("r4c3").innerHTML = parseFloat(value);
+        document.getElementById("r4c4").innerHTML = Number(value);
+        document.getElementById("r4c5").innerHTML = +value;
+        document.getElementById("r4c6").innerHTML = value | 0;
+
+        var value = document.getElementById("r5c1").innerText;
+        document.getElementById("r5c2").innerHTML = parseInt(value);
+        document.getElementById("r5c3").innerHTML = parseFloat(value);
+        document.getElementById("r5c4").innerHTML = Number(value);
+        document.getElementById("r5c5").innerHTML = +value;
+        document.getElementById("r5c6").innerHTML = value | 0;
+
+        var value = document.getElementById("r6c1").innerText;
+        document.getElementById("r6c2").innerHTML = parseInt(value);
+        document.getElementById("r6c3").innerHTML = parseFloat(value);
+        document.getElementById("r6c4").innerHTML = Number(value);
+        document.getElementById("r6c5").innerHTML = +value;
+        document.getElementById("r6c6").innerHTML = value | 0;
+
+        var value = document.getElementById("r7c1").innerText;
+        document.getElementById("r7c2").innerHTML = parseInt(value);
+        document.getElementById("r7c3").innerHTML = parseFloat(value);
+        document.getElementById("r7c4").innerHTML = Number(value);
+        document.getElementById("r7c5").innerHTML = +value;
+        document.getElementById("r7c6").innerHTML = value | 0;
+      }
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>str</td>
+        <td>parseInt(str)</td>
+        <td>parseFloat(str)</td>
+        <td>Number(str)</td>
+        <td>+str</td>
+        <td>str|0</td>
+      </tr>
+
+      <tr id="row2">
+        <td id="r2c1">1234</td>
+        <td id="r2c2">?</td>
+        <td id="r2c3">?</td>
+        <td id="r2c4">?</td>
+        <td id="r2c5">?</td>
+        <td id="r2c6">?</td>
+      </tr>
+
+      <tr id="row3">
+        <td id="r3c1">1234abc</td>
+        <td id="r3c2">?</td>
+        <td id="r3c3">?</td>
+        <td id="r3c4">?</td>
+        <td id="r3c5">?</td>
+        <td id="r3c6">?</td>
+      </tr>
+
+      <tr id="row4">
+        <td id="r4c1">0.15</td>
+        <td id="r4c2">?</td>
+        <td id="r4c3">?</td>
+        <td id="r4c4">?</td>
+        <td id="r4c5">?</td>
+        <td id="r4c6">?</td>
+      </tr>
+
+      <tr id="row5">
+        <td id="r5c1">3.14ivan</td>
+        <td id="r5c2">?</td>
+        <td id="r5c3">?</td>
+        <td id="r5c4">?</td>
+        <td id="r5c5">?</td>
+        <td id="r5c6">?</td>
+      </tr>
+
+      <tr id="r6">
+        <td id="r6c1">Infinity</td>
+        <td id="r6c2">?</td>
+        <td id="r6c3">?</td>
+        <td id="r6c4">?</td>
+        <td id="r6c5">?</td>
+        <td id="r6c6">?</td>
+      </tr>
+
+      <tr id="r7">
+        <td id="r7c1">99999999999999999999</td>
+        <td id="r7c2">?</td>
+        <td id="r7c3">?</td>
+        <td id="r7c4">?</td>
+        <td id="r7c5">?</td>
+        <td id="r7c6">?</td>
+      </tr>
+    </table>
+    <input type="button" value="Click" onclick="ShowData()" />
+  </body>
+</html>

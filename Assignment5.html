@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment5</title>
+  </head>
+  <script>
+    function printNumbers() {
+      const inputValue = document.getElementById("input").value;
+      const inputNumbers = parseInt(inputValue);
+      const resultElement = document.getElementById("result");
+      for (i = 1; i <= inputNumbers; i++) {
+        console.log(i);
+        resultElement.innerHTML += i + " ";
+      }
+    }
+  </script>
+  <body>
+    <div>
+      <h2>Numbers from 1 to N</h2>
+      <div>
+        <span> Enter a positive integer N: </span>
+        <span>
+          <input id="input" type="text" />
+          <button
+            id="printNumbers"
+            class="btn btn-dark"
+            onclick="printNumbers()"
+          >
+            Print Numbers
+          </button>
+        </span>
+        <div>
+          <span id="result"></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

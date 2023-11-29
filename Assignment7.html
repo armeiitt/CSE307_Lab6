@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="d-flex gap-4 py-3 flex-wrap flex-column">
+      <h4>Problem 7. MMSA of N Numbers</h4>
+      <p>Enter numbers separated by commas:</p>
+      <div class="input-group w-25">
+        <input id="MMSA-of-N-Number" class="form-control" type="text" />
+        <button class="btn btn-secondary" onclick="MMSAOfNNumber()">
+          Print Number
+        </button>
+      </div>
+      <div id="problem-7-result"></div>
+    </div>
+    <script>
+      const MMSAOfNNumber = () => {
+        // Lấy giá trị nhập vào từ người dùng
+        const inputElement = document.getElementById("MMSA-of-N-Number");
+        const inputValue = inputElement.value;
+
+        // Chuyển chuỗi thành mảng số
+        const numbers = inputValue.split(",").map(Number);
+
+        // Tìm số nhỏ nhất
+        const minNumber = Math.min(...numbers);
+
+        // Tìm số lớn nhất
+        const maxNumber = Math.max(...numbers);
+
+        // Tính tổng các số
+        const sum = numbers.reduce((acc, num) => acc + num, 0);
+
+        // Tính trung bình
+        const average = sum / numbers.length;
+
+        // Làm sạch element
+        document.getElementById("problem-7-result").innerHTML = ``;
+        // Hiển thị kết quả với 2 chữ số sau dấu thập phân
+        document.getElementById(
+          "problem-7-result"
+        ).innerHTML = `<p>Min: ${minNumber.toFixed(
+          2
+        )}</p><p>Max: ${maxNumber.toFixed(2)}</p><p>Sum: ${sum.toFixed(
+          2
+        )}</p><p>Avg: ${average.toFixed(2)}</p>`;
+      };
+    </script>
+  </body>
+</html>

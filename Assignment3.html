@@ -4,6 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment3</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <div id="result" class="d-flex"></div>
+    <script>
+      const arr = [
+        {
+          title: "The Alchemist",
+          image: "https://paperbacks.vn/wp-content/uploads/2023/02/23-05.jpg",
+          price: 182700,
+        },
+        {
+          title: "Learning How to Learn",
+          image:
+            "https://barbaraoakley.com/wp-content/uploads/2018/02/LHTL.jpg",
+          price: 251100,
+        },
+        {
+          title: "Thinking, Fast and Slow",
+          image:
+            "https://m.media-amazon.com/images/I/61fdrEuPJwL._AC_UF1000,1000_QL80_.jpg",
+          price: 299700,
+        },
+      ];
+      function compare(a, b) {
+        if (a.price < b.price) return -1;
+        if (a.price > b.price) return 1;
+        return 0;
+      }
+      const arrSorted = arr.sort(compare);
+
+      document.getElementById("result").innerHTML = arrSorted
+        .map((e) => {
+          return `<div class="d-flex flex-column"><div>${e.title}</div><div><img src="${e.image}" width="250px"/></div><div>${e.price}</div></div>`;
+        })
+        .join("");
+    </script>
+  </body>
 </html>

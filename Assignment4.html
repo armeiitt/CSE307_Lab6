@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment4</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const arr = [
+        {
+          id: 1,
+          title: "The Alchemist",
+          image: "https://paperbacks.vn/wp-content/uploads/2023/02/23-05.jpg",
+          price: 182700,
+        },
+        {
+          id: 2,
+          title: "Learning How to Learn",
+          image:
+            "https://barbaraoakley.com/wp-content/uploads/2018/02/LHTL.jpg",
+          price: 251100,
+        },
+        {
+          id: 3,
+          title: "Thinking, Fast and Slow",
+          image:
+            "https://m.media-amazon.com/images/I/61fdrEuPJwL._AC_UF1000,1000_QL80_.jpg",
+          price: 299700,
+        },
+      ];
+    </script>
+  </head>
+  <body>
+    <div
+      id="result"
+      class="d-flex justify-content-center align-items-center gap-3 mb-3 mt-3"
+    ></div>
+    <div class="d-flex gap-2 justify-content-center align-items-center">
+      <button class="btn btn-dark" onclick="printProducts()">
+        Print the products in the list
+      </button>
+      <button class="btn btn-dark" onclick="sortProductByPrice()">
+        Sort by price
+      </button>
+      <button class="btn btn-dark" onclick="sortProductByName()">
+        Sort by name
+      </button>
+      <button class="btn btn-dark" onclick="addProductToHeadArr()">
+        add Product To Head Arr
+      </button>
+      <button class="btn btn-dark" onclick="addProductToTailArr()">
+        add Product To Tail Arr
+      </button>
+      <div class="input-group mb-3">
+        <input
+          id="removeProductById"
+          type="text"
+          class="form-control"
+          placeholder="Enter product ID "
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+        />
+        <button
+          class="btn btn-danger"
+          onclick="removeProductById()"
+          type="button"
+          id="button-addon2"
+        >
+          Delete
+        </button>
+      </div>
+
+      <div class="input-group mb-3">
+        <input
+          id="searchInput"
+          type="text"
+          class="form-control"
+          placeholder="Recipient's username"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+        />
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          id="button-addon2"
+          onclick="searchProductByName()"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div id="editProductModal" class="modal fade" tabindex="-1"></div>
+    <script src="./assignment4.js"></script>
+  </body>
+</html>
